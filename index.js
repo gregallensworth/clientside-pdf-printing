@@ -12,7 +12,7 @@ var PDF_EXPORT_CONFIG = {
     margin: [ 0.5, 0.5, 0.5, 0.5 ], // page margin, in same units as above
     enableLinks: true,  // make hyperlinks work in the PDF? yes!
     image: { type: 'jpeg', quality: 1 },  // PDF image rendering settings; just keep these
-    html2canvas: { dpi: 192, letterRendering: true },  // / html2canvas options, usually fine as-given
+    html2canvas: { dpi: 192, letterRendering: false },  // / html2canvas options, usually fine as-given
 };
 
 

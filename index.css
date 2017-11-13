@@ -8,16 +8,19 @@
 }
 
 #thing1 {
+    font-family: Helvetica;
     background-color: blue;
     color: white;
     padding: 1em 1em 1em 1em;
 }
 #thing2 {
+    font-family: Times New Roman;
     font-weight: bold;
     font-style: italic;
     padding: 1em 1em 1em 1em;
 }
 #thing3 {
+    font-family: Arial;
     background-color: red;
     color: yellow;
     font-size: 9px;
@@ -25,6 +28,7 @@
     padding: 1em 1em 1em 1em;
 }
 #thing4 {
+    font-family: Helvetica;
     padding: 1em 1em 1em 1em;
 }
 #thing4 table {
