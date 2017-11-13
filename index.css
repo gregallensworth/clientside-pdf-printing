@@ -1,3 +1,11 @@
+.print_template {
+    /* these should be invisible, but will be made visible for printing purposes */
+    display: none;
+}
+
+#thepdf {
+}
+
 #thing1 {
     background-color: blue;
     color: white;
