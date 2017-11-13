@@ -4,15 +4,33 @@
 }
 
 #thepdf {
+    font-size: 10px;
 }
 
 #thing1 {
     background-color: blue;
     color: white;
+    padding: 1em 1em 1em 1em;
 }
-
 #thing2 {
     font-weight: bold;
     font-style: italic;
+    padding: 1em 1em 1em 1em;
 }
-
+#thing3 {
+    background-color: red;
+    color: yellow;
+    font-size: 9px;
+    font-style: italic;
+    padding: 1em 1em 1em 1em;
+}
+#thing4 {
+    padding: 1em 1em 1em 1em;
+}
+#thing4 table {
+    width: calc(100% - 5px);
+    border-collapse: collapse;
+}
+#thing4 table td {
+    border: 1px solid silver;
+}

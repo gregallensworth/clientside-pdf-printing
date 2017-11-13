@@ -12,7 +12,7 @@ But if we can generate PDFs wholly client-side using static files, we could make
 - [x] Export of an element of HTML
   - [ ] Basic header, some content block and footer
   - [ ] Images
-  - [ ] Hyperlinks
+  - [x] Hyperlinks
   - [ ] Bootstrap responsive table
   - [ ] Multi-page content
 - [x] PDF export of an element not visible on the page
