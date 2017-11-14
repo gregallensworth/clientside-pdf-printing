@@ -41,7 +41,8 @@ Generally speaking, there are two techniques:
 * Those based on composing a true PDF binary structure, using lower-level API such as `addPage()`, `setXY()`, `drawPath()`.
   * Examples: PDFkit, and pdfmake (a higher-level wrapper for common HTML structures)
   * Resulting PDFs are true PDFs with text, PDF metadata, etc.
-  * Low-level approach denies embedding of maps and charts without additional significant work, e.g. using Canvas techniques to save the chart or map to an image, then embedding that image. *Significantly more work.*
+  * Low-level approach denies embedding of maps and charts without additional significant work, e.g. using Canvas techniques to save the chart or map to an image, then embedding that image. *Significantly more work, taking a few hours for even simple pretty layouts, and requiring effectively-infiniite labor for pixel-perfect maps, charts, etc.*
+    * Example: Using pdfmake, adding new fonts means rebuilding the entire distribution from scratch. https://github.com/bpampuch/pdfmake/wiki/Custom-Fonts---client-side
 
 
 ## Credits
