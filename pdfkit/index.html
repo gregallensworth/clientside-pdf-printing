@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet-src.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" />
+    <script src="us-states.json"></script><!-- defines US_STATES for L.GeoJSON -->
+
+    <script src="pdfkit.js"></script>
+    <script src="blob-stream.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <script src="index.js"></script>
+</head>
+<body>
+
+<hr />
+
+<p><a href="#" onClick="printPdf();">Click this</a> to download a PDF, containing rendered content.</p>
+
+<p id="download">
+<a href="javascript:void(0);">Your download is ready. Click here.</a>
+</p>
+
+<hr />
+
+</body>
+</html>

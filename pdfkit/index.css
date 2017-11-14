@@ -1,0 +1,3 @@
+#download {
+    display: none; /* hidden by default, see printPdf() for showing it when a PDF is ready */
+}

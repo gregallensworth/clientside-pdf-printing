@@ -7,6 +7,15 @@ At work, we're looking into ways to use less-expensive technologies for simpler 
 But if we can generate PDFs wholly client-side using static files, we could make strides in our quest to host at Github pages and other lower-cost and no-cost providers.
 
 
+## Sample URLs
+
+https://gregallensworth.github.io/clientside-pdf-printing/rasterized/
+
+https://gregallensworth.github.io/clientside-pdf-printing/pdfmake/
+
+https://gregallensworth.github.io/clientside-pdf-printing/pdfkit/
+
+
 ## Goals for a Complete Success
 
 - [ ] Export of an element of HTML
@@ -43,6 +52,7 @@ Generally speaking, there are two techniques:
   * Resulting PDFs are true PDFs with text, PDF metadata, etc.
   * Low-level approach denies embedding of maps and charts without additional significant work, e.g. using Canvas techniques to save the chart or map to an image, then embedding that image. *Significantly more work, taking a few hours for even simple pretty layouts, and requiring effectively-infiniite labor for pixel-perfect maps, charts, etc.*
     * Example: Using pdfmake, adding new fonts means rebuilding the entire distribution from scratch. https://github.com/bpampuch/pdfmake/wiki/Custom-Fonts---client-side
+  * Kits lacks other fundamental features, e.g. triggering download or fetching content as a Blob for use with a hyperlink.
 
 
 ## Credits
