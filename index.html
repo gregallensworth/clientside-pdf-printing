@@ -5,6 +5,10 @@
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet-src.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" />
+    <script src="us-states.json"></script><!-- defines US_STATES for L.GeoJSON -->
+
     <script src="html2pdf/jspdf.min.js"></script>
     <script src="html2pdf/html2canvas.min.js"></script>
     <script src="html2pdf/html2pdf.js"></script>
@@ -195,8 +199,7 @@
 
         </div>
         <div class="page html2pdf__page-break">
-            <div id="Map">
-            </div>
+            <div id="PDF_Map"></div>
         </div>
         <div class="page">
             <div class="row">

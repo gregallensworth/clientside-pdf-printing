@@ -9,15 +9,15 @@ But if we can generate PDFs wholly client-side using static files, we could make
 
 ## Goals for a Complete Success
 
-- [x] Export of an element of HTML
+- [ ] Export of an element of HTML
   - [ ] Basic header, some content block and footer
   - [ ] Images
-  - [x] Hyperlinks
-  - [x] Bootstrap responsive table
+  - [ ] Hyperlinks
+  - [ ] Bootstrap responsive table + real table
   - [ ] Multi-page content
   - [ ] Font usage
-  - [ ] Ability to select text in the output PDF (copy-paste)
-- [x] PDF export of an element not visible on the page
+  - [ ] Ability to select text in the output PDF (copy-paste *non-rasterized* text)
+- [ ] PDF export of an element not visible on the page
   - [ ] Some statistical readout, even if in HTML
   - [ ] Alternative header simulating letterhead
 - [ ] PDF export of a Leaflet map
@@ -28,6 +28,20 @@ But if we can generate PDFs wholly client-side using static files, we could make
   - [ ] D3
   - [ ] Highcharts
 - [ ] Testing of page break behavior e.g. lengthy lists that would run off the bottom, so we know what workarounds or caveats are required
+
+
+## Summary of Discoveries So Far
+
+Generally speaking, there are two techniques:
+* Those based on *html2canvas* essentially render a visual representation of the HTML elements onto a Canvas, then save that Canvas as an image.
+  * Examples: html2pdf, jsPDF, canvg
+  * Some libraries can parse HTML effectively, making for more rapid development.
+  * Leaflet maps still TBD, no good outcomes yet.
+  * Resulting PDF is basically a static picture in a PDF container. It cannot have text selected (copy-paste), nor contain PDF metadata such as author info, page links and table of contents, and contains no text. *For real PDF purposes this is effectively worthless.*
+* Those based on composing a true PDF binary structure, using lower-level API such as `addPage()`, `setXY()`, `drawPath()`.
+  * Examples: PDFkit, and pdfmake (a higher-level wrapper for common HTML structures)
+  * Resulting PDFs are true PDFs with text, PDF metadata, etc.
+  * Low-level approach denies embedding of maps and charts without additional significant work, e.g. using Canvas techniques to save the chart or map to an image, then embedding that image. *Significantly more work.*
 
 
 ## Credits

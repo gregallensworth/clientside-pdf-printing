@@ -24,6 +24,33 @@ var PDF_EXPORT_CONFIG = {
 window.printPdf = function () {
     var element = document.getElementById('thepdf');
     $(element).removeClass('print_template');
+
+    // now that the PDF map is visible, sync it to the DIV
+    PDFMAP.invalidateSize();
+
     html2pdf(element, PDF_EXPORT_CONFIG);
+
     $(element).addClass('print_template');
 };
+
+
+var PDFMAP;
+$(document).ready(function () {
+    // in startup: the map that would show up in the PDF
+    // so here's the tricksy part: our usual UI would have a big ol' map and we would now need to bring this L.Map into sync
+    // by adding tile layers, removing layers, adding GeoJSON overlays, etc.
+    // hmmmmmmmm
+
+    PDFMAP = L.map('PDF_Map', {
+        zoomControl: false,
+        attributionControl: false,
+    })
+    .setView([37.8, -96], 4);
+
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+        maxZoom: 18
+    }).addTo(PDFMAP);
+
+    L.geoJson(US_STATES).addTo(PDFMAP);
+});
